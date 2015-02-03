@@ -12,7 +12,9 @@ spec :: Spec
 spec =
 
   describe "mediaType" $
+
     it "determines the correct MediaType of a FilePath" $ do
+
       mediaType "foo.png"  `shouldBe` Image
       mediaType "bar.md"   `shouldBe` Document
       mediaType "baz.flac" `shouldBe` Music
