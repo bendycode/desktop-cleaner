@@ -213,6 +213,19 @@ au FileType haskell nnoremap <buffer> <Leader>t :! cabal \
 
 
 
+# Documentation
+
+Sometimes you still need it!
+
+`Hoogle`:
+  https://www.haskell.org/hoogle/
+
+`Haskell platform`:
+  http://lambda.haskell.org/platform/doc/current/frames.html
+
+
+
+
 # Congratulations!
 
 You now hold the powers of creation that once only God could

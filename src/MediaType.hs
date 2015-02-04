@@ -37,13 +37,13 @@ destination media = do
 -- private functions
 
 docExts, imageExts, musicExts :: [T.Text]
-docExts   = ["pdf", "doc", "md", "odf", "txt", "html"]
-imageExts = ["gif", "png", "jpg", "jpeg"]
-musicExts = ["mp3", "flac", "m4a"]
+docExts   = ["pdf", "doc", "md", "odf", "txt", "html", "tex"]
+imageExts = ["gif", "png", "jpg"]
+musicExts = ["flac", "m4a", "ogg", "wav", "aiff"]
 
 fileExtMap :: M.Map T.Text MediaType
 fileExtMap =
-  let tuple exts ftype = flip map exts $ \ext -> (ext,ftype)
+  let tuple exts ftype = zip exts $ repeat ftype
   in  M.fromList $  tuple docExts   Document
                  ++ tuple imageExts Image
                  ++ tuple musicExts Music
